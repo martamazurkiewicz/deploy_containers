@@ -1,3 +1,5 @@
+name: deploy_containers
+
 resources:
   repositories:
   - repository: dockerfiles
