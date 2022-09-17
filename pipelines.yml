@@ -29,8 +29,8 @@ jobs:
     displayName: 'Copy dockerfiles into pipeline'
     inputs:
       contents: '$(Build.SourcesDirectory)/dockerfiles/**'
-      targetFolder: '$(Build.ArtifactStagingDirectory)/dockerfiles'
-  - publish: '$(Build.ArtifactStagingDirectory)/'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+  - publish: '$(Build.ArtifactStagingDirectory)'
     displayName: 'Publish dockerfiles for later use'
     artifact: dockerfiles
 
