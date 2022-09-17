@@ -1,0 +1,16 @@
+parameters:
+- name: purge_volumes
+  displayName: Purge volumes
+  type: bool
+  default: false 
+
+trigger:
+- none
+
+jobs:
+- job: build
+  displayName: build
+  pool: 
+    name: Default
+  steps:
+  - script: 
