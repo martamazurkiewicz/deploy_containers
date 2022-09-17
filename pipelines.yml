@@ -32,11 +32,9 @@ jobs:
   pool:
     name: Default
   steps:
-  - task: CmdLine@2
-    inputs:
-      script: |
-        echo "List all dockerfiles"
-        ls "$(Build.SourcesDirectory)"
+  - script: |
+      echo "List all dockerfiles"
+      ls "$(Build.SourcesDirectory)"
   # - task: CmdLine@2
   #   inputs: 
   #     script: echo "##vso[task.setvariable variable=containers;]ls $(Build.SourcesDirectory)"
