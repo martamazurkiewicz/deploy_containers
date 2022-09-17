@@ -1,0 +1,12 @@
+parameters:
+  containers : []
+
+steps:
+  - ${{each filename in parameters.containers}}:
+  - task
+    - scripts: 'echo ${{ filename }}'
+  - task: Docker@2
+      displayName: Build an image
+      inputs:
+        command: build
+        Dockerfile: ${{ filename }}
